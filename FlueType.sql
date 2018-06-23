@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS FlueType(
+    FlueTypeId          INT PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
+    Type                VARCHAR(200) NOT NULL
+)
