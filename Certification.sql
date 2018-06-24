@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Certification (
-    CertificationId         INT PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
+    CertificationId         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
     COAlarm                 BIT,
     COFitted                BIT,
     COTested                BIT,

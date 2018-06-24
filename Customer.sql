@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Customer (
-    CustomerId          INT PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
+    CustomerId          INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
     FirstName           VARCHAR(100),
     Surname             VARCHAR(100),
     FirstLinAddress     VARCHAR(100),

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/Users/juliandragoi/databases/GasCertifications.db" foreign_keys="1"/><window><current_tab id="0"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1612"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="Job"/><default_encoding codec=""/><browsetable_info data="AAAAAA=="/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE IF NOT EXISTS Job (
+    JobId                   INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+    FirstName               VARCHAR(128),
+    Surname                 VARCHAR(128),
+    FirstLineAddress        VARCHAR(128),
+    SecondLineAddress       VARCHAR(128),
+    Postcode                VARCHAR(10),
+    Phone                   VARCHAR(16)
+)</sql><current_tab id="0"/></tab_sql></sqlb_project>

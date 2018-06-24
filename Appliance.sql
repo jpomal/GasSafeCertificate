@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS Appliance (
-    ApplianceId         INT PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
-    ApplianceTypeId     INT,
-    FlueTypeId          INT,
+    ApplianceId         INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL DEFAULT(-1),
+    ApplianceTypeId     INTEGER,
+    FlueTypeId          INTEGER,
     Location            VARCHAR(200),
     LandlordAppliance   BIT,
     ApplianceInspected  BIT,
