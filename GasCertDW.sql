@@ -2,12 +2,12 @@
 --COMMENTS : NEED TO ALTER TABLES TO ADD THE FOREIGN KEY CONTSTAINTS
 --			 NEED TO CREATE FACT TABLE/TRANSACTION TABEL
 --			 NEED TO ALSO INSERT DATA ON REMAINING TABLES
-CREATE DATABASE IF NOT EXISTS dbo.GasCert_DW
+CREATE DATABASE IF NOT EXISTS GasCert_DW
 GO
 
 USE GasCert_DW
 
-CREATE TABLE IF NOT EXISTS dbo.DimCustomer
+CREATE TABLE IF NOT EXISTS DimCustomer
 (
 CustomerKey INT NOT NULL,
 FirstName VARCHAR(100),
@@ -22,7 +22,7 @@ PRIMARY KEY (CustomerKey),
 FOREIGN KEY FK_CustomerKey(CustomerKey) REFERENCES FactCertificate(CustomerKey)
 )
 
-CREATE TABLE IF NOT EXISTS dbo.DimUser
+CREATE TABLE IF NOT EXISTS DimUser
 (
 UserKey INT NOT NULL,
 FirstName VARCHAR(100) NOT NULL,
@@ -37,7 +37,7 @@ FOREIGN KEY FK_UserKey(UserKey) REFERENCES FactCertificate(UserKey)
 )
 GO
 
-CREATE TABLE IF NOT EXISTS dbo.DimAppliance (
+CREATE TABLE IF NOT EXISTS DimAppliance (
 ApplianceKey INT NOT NULL,
 ApplianceTypeKey INT ,
 FlueTypeKey INT ,
@@ -61,7 +61,7 @@ FOREIGN KEY FK_ApplianceKey(ApplianceKey) REFERENCES FactCertificate(ApplianceKe
 )
 GO
  
-CREATE TABLE IF NOT EXISTS dbo.DimApplianceType (
+CREATE TABLE IF NOT EXISTS DimApplianceType (
  ApplianceTypeKey INT NOT NULL,
  App_Type VARCHAR(200) NOT NULL,
  Make VARCHAR(200) NOT NULL,
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS dbo.DimApplianceType (
 )
 
  
-CREATE TABLE IF NOT EXISTS dbo.DimFlueType(
+CREATE TABLE IF NOT EXISTS DimFlueType(
  FlueTypeKey  INT NOT NULL,
  FlueType VARCHAR(200) NOT NULL,
  PRIMARY KEY (FlueTypeKey),
@@ -81,7 +81,7 @@ CREATE TABLE IF NOT EXISTS dbo.DimFlueType(
 GO
 
 
-CREATE TABLE IF NOT EXISTS dbo.DimCertification (
+CREATE TABLE IF NOT EXISTS DimCertification (
  CertificationKey INT PRIMARY KEY IDENTITY(1,1) NOT NULL,
  COAlarm  BIT,
  COFitted BIT,
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS dbo.DimCertification (
 )
 GO
 
-CREATE TABLE IF NOT EXISTS dbo.DimJob (
+CREATE TABLE IF NOT EXISTS DimJob (
 JobKey INT NOT NULL,
 FirstName VARCHAR(128),
 Surname VARCHAR(128),
@@ -116,7 +116,7 @@ FOREIGN KEY FK_JobKey(JobKey) REFERENCES FactCertificate(JobKey)
 )
 GO
 
-CREATE TABLE IF NOT EXISTS dbo.DimDate
+CREATE TABLE IF NOT EXISTS DimDate
 	(	[DateKey] INT PRIMARY KEY, 
 		[Date] DATETIME,
 		[FullDateUK] CHAR(10), -- Date in dd-MM-yyyy format
@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS dbo.DimDate
 	)
 GO
  
-CREATE TABLE IF NOT EXISTS dbo.DimTime( 
+CREATE TABLE IF NOT EXISTS DimTime( 
 [TimeKey] [int] NOT NULL, 
 [TimeAltKey] [int] NOT NULL, 
 [Time30] [varchar](8) NOT NULL, 
@@ -171,7 +171,7 @@ FOREIGN KEY FK_TimeKey(TimeKey) REFERENCES FactCertificate(TimeKey)
 GO 
 
 
-CREATE TABLE IF NOT EXISTS dbo.FactCertificate(
+CREATE TABLE IF NOT EXISTS FactCertificate(
 	FactCertificateKey INT NOT NULL,
 	UserKey INT NOT NULL,
 	CustomerKey INT NOT NULL,
