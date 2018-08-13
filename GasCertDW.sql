@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS InspectionDefect(
 	DefectKey INT NOT NULL,
 	PRIMARY KEY(InspectionDefectKey),
 	FOREIGN KEY FK_InspectionDefectKey(DefectKey) REFERENCES Defect(DefectKey),
-	FOREIGN KEY FK_InspectionCertificationKey(CertificationKey) REFERENCES DimCertification(CertificationKey)
+	FOREIGN KEY FK_DefectCertificationKey(CertificationKey) REFERENCES DimCertification(CertificationKey)
 );
 
 
@@ -131,7 +131,8 @@ CREATE TABLE IF NOT EXISTS FactInspection(
 	CertificationKey INT,
 	PRIMARY KEY (FactInspectionKey),
 	FOREIGN KEY FK_FactPersonKey(PersonKey) REFERENCES DimPerson(PersonKey),
-	FOREIGN KEY FK_FactAddressKey(AddressKey) REFERENCES Address(AddressKey)
+	FOREIGN KEY FK_FactAddressKey(AddressKey) REFERENCES Address(AddressKey),
+	FOREIGN KEY FK_InspectionCertificationKey(CertificationKey) REFERENCES DimCertification(CertificationKey)
 );
 
 
