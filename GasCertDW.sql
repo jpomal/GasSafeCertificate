@@ -117,7 +117,8 @@ CREATE TABLE IF NOT EXISTS InspectionDefect(
 	CertificationKey INT NOT NULL,
 	DefectKey INT NOT NULL,
 	PRIMARY KEY(InspectionDefectKey),
-	FOREIGN KEY FK_InspectionDefectKey(DefectKey) REFERENCES Defect(DefectKey)
+	FOREIGN KEY FK_InspectionDefectKey(DefectKey) REFERENCES Defect(DefectKey),
+	FOREIGN KEY FK_InspectionCertificationKey(CertificationKey) REFERENCES DimCertification(CertificationKey)
 );
 
 
