@@ -8,3 +8,6 @@ ToDo List
 - Ingesting JSON data into MySQL via REST API
 OR
 - MongoDb data extract to ingest into MySQL
+
+- integrate addresses with - https://getaddress.io/
+- integrate logins with - https://auth0.com/
