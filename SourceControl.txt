@@ -1,0 +1,18 @@
+--- To push to local and remote repo
+## all instruction are to be executed without the [] symbols
+
+- git add [filename]
+- git commit -m "[message]"
+- git push
+
+--- To set up and fetch from original master branch sync
+## if at anytime in this process you get a screen with blue dashes
+- type :wq without worrying about where the cursor is
+
+In Terminal
+- cd [clone directory]
+- git remote add upstream git://github.com/juliandragoi/GasSafeCertificate.git 
+- git fetch upstream
+- git pull upstream master
+- git commit -a -m ‘rebase’
+- git push
