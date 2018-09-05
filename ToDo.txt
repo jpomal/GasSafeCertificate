@@ -11,3 +11,4 @@ OR
 
 - integrate addresses with - https://getaddress.io/
 - integrate logins with - https://auth0.com/
+--Jiten Pomal
