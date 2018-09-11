@@ -41,8 +41,8 @@ SET IDENTITY_INSERT #DimAppliance ON;
 
 CREATE PROCEDURE #Sp_DimAppliance
 
-	@ApplianceKey				INT ,
-	@ApplianceTypeKey			INT ,
+	
+	
 	@FlueTypeKey				INT ,
 	@Location					VARCHAR(200),
 	@CompanyPostcode			BIT,
@@ -68,8 +68,8 @@ BEGIN
 INSERT INTO #DimAppliance
 
 		(
-			ApplianceKey		,
-			ApplianceTypeKey	,
+			
+			
 			FlueTypeKey			,
 			Location			,
 			CompanyPostcode		,
@@ -88,8 +88,8 @@ INSERT INTO #DimAppliance
 		)
 VALUES 
 		(
-			@ApplianceKey			,
-			@ApplianceTypeKey		,
+			
+			
 			@FlueTypeKey			,
 			@Location				,
 			@CompanyPostcode		,
@@ -109,12 +109,12 @@ VALUES
 
 END
 
-
+GO
 
 EXEC #Sp_DimAppliance
 
-	@ApplianceKey =	1				,
-	@ApplianceTypeKey =	123			,
+	
+	
 	@FlueTypeKey =	25				,
 	@Location = 'WEST LONDON'		,
 	@CompanyPostcode = 1			,

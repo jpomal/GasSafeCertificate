@@ -29,7 +29,7 @@ GO
 -- TEST TO SEE IF YOU NEED TO SPECIFY THE NOT NULL AS WE HAVE ALREADY HAVE IN THE CREATE TABLE STATMENT
 CREATE PROCEDURE #Sp_DimPerson
 
-	@PersonKey 					INT NOT NULL 						    ,
+	
 	@PersonTypeKey 				INT NOT NULL						    ,
 	@AddressKey 				INT NOT NULL		 					,
 	@FirstName 					VARCHAR(100)							,
@@ -52,7 +52,7 @@ INSERT INTO DimPerson
 
 	(
 
-	PersonKey 					,			
+	
 	PersonTypeKey 				,
 	AddressKey 				    ,
 	FirstName 					,
@@ -69,7 +69,7 @@ INSERT INTO DimPerson
 VALUES
 	(
 
-	@PersonKey 					,			
+		
 	@PersonTypeKey 				,
 	@AddressKey 				,
 	@FirstName 					,
@@ -87,7 +87,7 @@ END
 
 EXEC Sp_DimPerson
 
-	@PersonKey 	=				,			
+	
 	@PersonTypeKey =				,
 	@AddressKey =				,
 	@FirstName 	=				,

@@ -11,7 +11,7 @@ GO
 
 
 CREATE PROCEDURE #Sp_DimFlueType
-	@FlueTypeKey					INT					,
+	
 	@FlueType						VARCHAR(200)		
 
 	
@@ -27,14 +27,14 @@ BEGIN
 INSERT INTO #DimFlueType
 
 	(
-		FlueTypeKey			,
+		
 		FlueType				
 	)
 
 	VALUES
 
 	(
-		@FlueTypeKey		,
+		
 		@FlueType
 							
 	)
@@ -45,7 +45,7 @@ GO
 
 EXEC #Sp_DimFlueType
 
-		@FlueTypeKey = 1		,		
+		
 		@FlueType = 'TESTFLUE'
 
 
@@ -59,5 +59,3 @@ EXEC #Sp_DimFlueType
 
 	--select * from #DimFlueType
 	--WHERE Make	= 'TESTMAKE02'
-
-	TRUNCATE TABLE #DimFlueType

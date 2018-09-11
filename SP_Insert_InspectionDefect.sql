@@ -5,7 +5,7 @@ USE TEMPDB
 GO
 
 -- CREATE TABLE InspectionDefect(
--- 	InspectionDefectKey 				INT NOT NULL AUTO_INCREMENT,
+-- 	InspectionDefectKey 				IINT NOT NULL IDENTITY(1,1),
 -- 	CertificationKey 					INT NOT NULL,
 -- 	DefectKey 							INT NOT NULL,
 -- 	PRIMARY KEY(InspectionDefectKey),
@@ -26,7 +26,7 @@ GO
 
 CREATE PROCEDURE SP_InspectionDefect
 
-	@InspectionDefect 	INT 		,
+	
 	@CertificationKey 	INT 		,
 	@DefectKey 			INT 		
 
@@ -42,7 +42,7 @@ SET IDENTITY_INSERT InspectionDefect ON;
 INSERT INTO InspectionDefect
 
 	(
-		InspectionDefect 			,
+		
 		CertificationKey 			,
 		DefectKey
 
@@ -51,7 +51,7 @@ INSERT INTO InspectionDefect
 VALUES
 
 	(
-		@InspectionDefect 			,
+		
 		@CertificationKey 			,
 		@DefectKey
 
@@ -59,7 +59,7 @@ VALUES
 
 	EXEC PROCEDURE SP_InspectionDefect
 
-		@InspectionDefect  =			,
+		
 		@CertificationKey 	=		,
 		@DefectKey =
 
