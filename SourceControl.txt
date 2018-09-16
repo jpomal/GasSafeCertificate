@@ -16,3 +16,7 @@ In Terminal
 - git pull upstream master
 - git commit -a -m ‘rebase’
 - git push
+
+To merge YOUR code with master repo
+- create pull request on GitHub website on your repo
+- once all ok, click merge
