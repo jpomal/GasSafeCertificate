@@ -30,7 +30,7 @@ GO
 
 CREATE PROCEDURE SP_FactInspection
 
-	@FactInspectionKey 					INT 		,	
+	
 	@PersonKey 							INT 	    , 
 	@AddressKey 						INT 		,
 	@NextInspectionDateTime			    DATETIME    ,
@@ -50,7 +50,7 @@ SET IDENTITY_INSERT FactInspection ON;
 
  
 	 (
-		FactInspectionKey ,
+		
 		PersonKey,
 		AddressKey,
 		NextInspectionDateTime,
@@ -62,7 +62,7 @@ SET IDENTITY_INSERT FactInspection ON;
 VALUES 
 
 (
-		@FactInspectionKey ,
+		
 		@PersonKey,
 		@AddressKey,
 		@NextInspectionDateTime,
@@ -75,7 +75,7 @@ GO
 
 EXEC SP_FactInspection
 
-		@FactInspectionKey = ,
+		
 		@PersonKey = ,
 		@AddressKey = ,
 		@NextInspectionDateTime = ,

@@ -12,24 +12,23 @@ go
 
 CREATE PROCEDURE SP_DefectType
 
-	@DefectType INT,
 	@Type INT,
 
 INSERT INTO DefectType
 	 (
-	 	DefectType,
+	 
 	 	Type
 	 )
 VALUES	
 
 	(
-		@DefectType ,
+		
 		@Type
 	)
 
 
 EXEC SP_DefectType
 
-	@DefectType  =,
+	
 	@Type =
 

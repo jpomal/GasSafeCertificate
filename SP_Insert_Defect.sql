@@ -23,7 +23,6 @@ GO
 
 CREATE PROCEDURE SP_Defect
 
-	@DefectKey INT NOT NULL ,
 	@DefectTypeKey INT NOT NULL,
 	@Severity INT,
 	@Comment VARCHAR(4000)
@@ -40,7 +39,7 @@ SET IDENTITY_INSERT Defect ON;
 
 INSERT INTO Defect
 	(
-		Defect,
+		
 		DefectTypeKey,
 		Severity,
 		Comment
@@ -51,7 +50,7 @@ VALUES
 
 
 	 (
-	 	@Defect ,
+	 	
 	 	@DefectKey ,
 	 	@Severity ,
 	 	@Comment 
@@ -64,7 +63,7 @@ GO
 
 EXEC SP_Defect
 
-		@Defect = ,
+		
 	 	@DefectKey = ,
 	 	@Severity  =,
 	 	@Comment =

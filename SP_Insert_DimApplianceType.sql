@@ -1,4 +1,4 @@
-13
+
 --use tempdb
 
 --GO
@@ -16,7 +16,7 @@
 
 CREATE PROCEDURE #Sp_DimApplianceType 
 
-	@ApplianceTypeKey				INT 					,
+	
  	@App_Type						VARCHAR	(200)			,
  	@Make							VARCHAR	(200)			,
  	@Model							VARCHAR	(200)			,
@@ -33,7 +33,7 @@ SET IDENTITY_INSERT #DimApplianceType ON;
 
 INSERT INTO #DimApplianceType
 (
-	ApplianceTypeKey				,
+	
  	App_Type						,
  	Make							,
  	Model							,
@@ -45,7 +45,7 @@ VALUES
 
 (
 
-	@ApplianceTypeKey 				,
+	
  	@App_Type						,
  	@Make							,
  	@Model							,
@@ -59,7 +59,7 @@ GO
 
 EXEC #Sp_DimApplianceType
 
-	@ApplianceTypeKey = 7						,
+	
  	@App_Type = 'TEST'					,
  	@Make	= 'TEST',
  	@Model	= 'TEST'					,
@@ -74,4 +74,4 @@ EXEC #Sp_DimApplianceType
 	--select * from #DimApplianceType
 	--WHERE Make	= 'TESTMAKE02'
 
-	TRUNCATE TABLE #DimApplianceType
+	-- TRUNCATE TABLE #DimApplianceType

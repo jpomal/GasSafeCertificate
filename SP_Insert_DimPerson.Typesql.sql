@@ -26,13 +26,13 @@ BEGIN
 INSERT INTO PersonType
 
 	(
-		PersonTypeKey				,
+		
 		Type  						,
 	)
 
 VALUES
 	 (
-	 	@PersonType 				,
+	 	
 	 	@Type  						,
 	 )
 
@@ -40,7 +40,7 @@ END
 
 EXEC SP_PersonType
 
-	@PersonType = 					,
+	
 	@Type   =						,
 
 

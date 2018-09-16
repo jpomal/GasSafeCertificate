@@ -17,11 +17,10 @@ GO
 
 CREATE PROCEDURE SP_Address
 
-	@AddressKey 			INT NOT NULL 						,
 	@CompanyName 			VARCHAR(200)						,
 	@FirstLineAddress 		VARCHAR(200)						,
 	@SecondLineAddress 	 	VARCHAR(500)						,
-	@Postcode 				VARCHAR(8)							,
+	@Postcode 				VARCHAR(8)							
 
  AS
 BEGIN
@@ -33,7 +32,7 @@ BEGIN
 INSERT INTO Address
 
 	(
-		AddressKey						,
+		
 		CompanyName						,
 		FirstLineAddress				,
 		SecondLineAddress				,
@@ -42,7 +41,7 @@ INSERT INTO Address
 VALUES
 
 	(
-		@AddressKey						,
+								
 		@CompanyName					,
 		@FirstLineAddress				,
 		@SecondLineAddress				,
@@ -54,7 +53,7 @@ END
 
 EXEC SP_Address
 
-		@AddressKey	 =					,
+		
 		@CompanyName =					,
 		@FirstLineAddress =				,
 		@SecondLineAddress =			,
